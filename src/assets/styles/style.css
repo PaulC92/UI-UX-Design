@@ -1,0 +1,49 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+#Navigation {
+    border-bottom: 3px solid #8c522e;
+}
+
+#Hero {
+    background-color: #fdf0da;
+}
+
+#Footer {
+  background-color: #fdf0da;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  border-top: 3px solid #8c522e; /* visually anchors bottom */
+}
+
+.horizontal-scroll {
+  overflow-x: auto;           /* Enables horizontal scroll */
+  overflow-y: hidden;
+  white-space: nowrap;        /* Keeps cards in a single row */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scroll for mobile */
+  padding-bottom: 10px;       /* Adds a bit of spacing under cards */
+}
+
+/* Smooth scrolling and spacing */
+.horizontal-scroll > .card {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+/* Optional: hide scrollbar for a cleaner mobile feel */
+.horizontal-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
