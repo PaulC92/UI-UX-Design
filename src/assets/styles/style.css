@@ -8,6 +8,58 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Force mobile-size layout even on desktop */
+@media (min-width: 600px) {
+  html, body {
+    width: 390px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow-x: hidden;
+    background-color: #fff;
+  }
+
+  html {
+    background-color: #f4f4f4;
+  }
+
+  body {
+    box-shadow: 0 0 30px rgba(0,0,0,0.25);
+  }
+
+  /* Keep navbar inside phone frame */
+  .navbar.fixed-top {
+    width: 390px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px 20px 0 0;
+  }
+
+  .offcanvas {
+    width: 380px !important;
+    height: 98dvh;
+  }
+
+  /* Prevent container sections from expanding wider than phone width */
+  .container,
+  .container-fluid {
+    max-width: 390px !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Make bakery section behave normally inside frame */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [class*="col-"] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+
 #Navigation {
     border-bottom: 3px solid #8c522e;
 }
