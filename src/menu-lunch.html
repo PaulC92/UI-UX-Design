@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Lunch | Steam & Sugar</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/styles/menu.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Nav Bar-->
+  <nav id="Navigation" class="navbar py-2" style="background-color: #fdf0da;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Steam and Sugar logo" width="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color: #fdf0da9d;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Steam & Sugar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body fw-bold">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catering.html">Catering</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"><small>About us</small></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><small>Past events & Creations</small></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Category Navigation -->
+  <nav id="menuNav" class="category-nav nav justify-content-around py-2">
+    <a class="nav-link" href="menu.html">All Items</a>
+    <a class="nav-link" href="menu-drinks.html">Drinks</a>
+    <a class="nav-link" href="menu-bakery.html">Bakery</a>
+    <a class="nav-link active" href="menu-lunch.html">Lunch</a>
+  </nav>
+
+  <main class="container my-3">
+
+    <!-- Lunch Section -->
+    <section id="lunch" class="mb-5">
+      <h6 class="fw-bold mb-3">Lunch Specials</h6>
+
+      <div class="menu-item d-flex align-items-center mb-3 shadow-sm">
+        <img src="assets/images/club.jpg" alt="Club Sandwich" class="me-3">
+        <div class="flex-grow-1">
+          <h6 class="mb-1 fw-bold">Club Sandwich</h6>
+          <p class="mb-1 text-muted small">Chicken, bacon, lettuce & tomato</p>
+          <p class="mb-0 text-muted small">£5.80</p>
+        </div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-3 shadow-sm">
+        <img src="assets/images/toastie.jpg" alt="Ham & Cheese Toastie" class="me-3">
+        <div class="flex-grow-1">
+          <h6 class="mb-1 fw-bold">Ham & Cheese Toastie</h6>
+          <p class="mb-1 text-muted small">Melted cheddar on fresh sourdough</p>
+          <p class="mb-0 text-muted small">£4.90</p>
+        </div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-3 shadow-sm">
+        <img src="assets/images/soup.jpg" alt="Soup of the Day" class="me-3">
+        <div class="flex-grow-1">
+          <h6 class="mb-1 fw-bold">Soup of the Day</h6>
+          <p class="mb-1 text-muted small">Served with artisan bread</p>
+          <p class="mb-0 text-muted small">£4.50</p>
+        </div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-3 shadow-sm">
+        <img src="assets/images/chickenwrap.jpg" alt="Chicken Caesar Wrap" class="me-3">
+        <div class="flex-grow-1">
+          <h6 class="mb-1 fw-bold">Chicken Caesar Wrap</h6>
+          <p class="mb-1 text-muted small">Crispy chicken and Caesar dressing</p>
+          <p class="mb-0 text-muted small">£5.60</p>
+        </div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-3 shadow-sm">
+        <img src="assets/images/panini.jpg" alt="Veggie Panini" class="me-3">
+        <div class="flex-grow-1">
+          <h6 class="mb-1 fw-bold">Veggie Panini</h6>
+          <p class="mb-1 text-muted small">Grilled peppers, mozzarella & pesto</p>
+          <p class="mb-0 text-muted small">£5.40</p>
+        </div>
+      </div>
+
+      <div class="menu-item d-flex align-items-center mb-3 shadow-sm">
+        <img src="assets/images/bagel.png" alt="Smoked Salmon Bagel" class="me-3">
+        <div class="flex-grow-1">
+          <h6 class="mb-1 fw-bold">Smoked Salmon Bagel</h6>
+          <p class="mb-1 text-muted small">Cream cheese, dill & lemon</p>
+          <p class="mb-0 text-muted small">£5.90</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="Footer" class="container pt-3 mt-5 mb-0">
+    <footer>
+      <div class="row mt-4">
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 mt-5">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><p>Follow us: </p></li>
+          <li class="ms-3">
+            <a class="link-body-emphasis" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li class="ms-3">
+            <a class="link-body-emphasis" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+        </ul>
+        <p class="ms-3">© 2025 Steam & Sugar</p>
+      </div>
+
+    </footer>
+  </div>
+
+</body>
+</html>

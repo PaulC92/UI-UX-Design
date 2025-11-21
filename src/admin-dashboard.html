@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Steam & Sugar</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/styles/admin.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-light">
+
+  <!-- Top app bar (no offcanvas) -->
+  <nav id="Navigation" class="navbar py-2" style="background-color:#fdf0da;">
+    <div class="container-fluid align-items-center">
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand me-2" href="index.html">
+          <img src="assets/images/logo.png" alt="Steam & Sugar logo" width="32" height="32">
+        </a>
+        <div class="d-flex flex-column lh-1">
+          <span class="small text-muted">Steam &amp; Sugar</span>
+          <span class="fw-semibold">Admin Dashboard</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Phone-width shell -->
+  <div class="admin-shell mx-auto">
+
+    <!-- Dashboard header + tabs -->
+    <header class="px-3 pt-3 pb-2 border-bottom bg-white">
+      <h6 class="fw-bold mb-2">Dashboard</h6>
+      <ul class="nav admin-tabs small">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin-items.html">Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin-users.html">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin-reports.html">Reports</a>
+        </li>
+      </ul>
+
+      <!-- Search bar -->
+      <div class="search-bar mt-3">
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input type="search" class="form-control" placeholder="Search">
+        </div>
+      </div>
+    </header>
+
+    <main class="p-3 pb-4">
+
+      <!-- Top sellers card -->
+      <section class="admin-card mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h6 class="mb-0 fw-semibold small">Top Sellers this week</h6>
+          <span class="text-muted small">%</span>
+        </div>
+        <ul class="list-unstyled mb-0 small">
+          <li class="d-flex justify-content-between align-items-center mb-1">
+            <div>
+              <i class="fa-solid fa-mug-hot me-2 text-muted"></i>
+              Sml Latte
+            </div>
+            <span>27.5%</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center mb-1">
+            <div>
+              <i class="fa-solid fa-mug-hot me-2 text-muted"></i>
+              Med Cappuccino
+            </div>
+            <span>18.1%</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center mb-1">
+            <div>
+              <i class="fa-solid fa-cookie me-2 text-muted"></i>
+              Blueberry Muffin
+            </div>
+            <span>10.5%</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center mb-1">
+            <div>
+              <i class="fa-solid fa-mug-hot me-2 text-muted"></i>
+              Flat White
+            </div>
+            <span>10.1%</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center mb-1">
+            <div>
+              <i class="fa-solid fa-ice-cream me-2 text-muted"></i>
+              Chocolate Twist
+            </div>
+            <span>8%</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fa-solid fa-mug-hot me-2 text-muted"></i>
+              Med Vanilla Iced Latte
+            </div>
+            <span>4%</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Weekly sales vs waste -->
+      <section class="admin-card mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2 pt-2">
+          <h6 class="mb-0 fw-semibold small">Weekly Sales vs Waste</h6>
+          <div class="small text-muted">
+            <span class="me-3"><span class="legend-dot legend-sold"></span> Sold</span>
+            <span><span class="legend-dot legend-waste"></span> Waste</span>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center p-5 mt-2">
+          <div class="donut-wrapper mb-2">
+            <div class="donut">
+              <div class="donut-hole"></div>
+            </div>
+            <div class="donut-label">
+              <span class="fw-bold">90%</span>
+            </div>
+          </div>
+          <small class="text-muted">Product utilisation</small>
+        </div>
+      </section>
+
+      <!-- Footer-like quick links card (optional mini footer) -->
+      <section class="admin-card small mb-2">
+        <div class="row">
+          <div class="col-4 mb-3">
+            <h6 class="small fw-semibold mb-1">Mobile app</h6>
+            <ul class="list-unstyled mb-0">
+              <li>Live share</li>
+              <li>Video record</li>
+            </ul>
+          </div>
+          <div class="col-4 mb-3">
+            <h6 class="small fw-semibold mb-1">Community</h6>
+            <ul class="list-unstyled mb-0">
+              <li>Featured artists</li>
+              <li>Live events</li>
+            </ul>
+          </div>
+          <div class="col-4 mb-3">
+            <h6 class="small fw-semibold mb-1">Company</h6>
+            <ul class="list-unstyled mb-0">
+              <li>About us</li>
+              <li>History</li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-2">
+          <span class="small text-muted">Follow us</span>
+          <div class="d-flex gap-2">
+            <a href="#" class="icon-circle" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="icon-circle" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <p class="text-center small text-muted mb-0">© Steam &amp; Sugar</p>
+
+    </main>
+  </div>
+
+</body>
+</html>

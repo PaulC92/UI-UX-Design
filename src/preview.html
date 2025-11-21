@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Steam & Sugar — UI Preview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f3f3f3;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .layout-container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 260px;
+      background: #ffffff;
+      border-right: 1px solid #ddd;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .sidebar h5 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .sidebar .nav-link {
+      padding: 6px 8px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .sidebar .nav-link.active {
+      background: #f0dac0;
+      font-weight: bold;
+    }
+
+    /* Sub-button group */
+    .sub-buttons button {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 4px;
+      border-radius: 6px;
+    }
+
+    /* Device frame */
+    .device-area {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .device-frame {
+      width: 430px;
+      height: 860px;
+      border-radius: 32px;
+      border: 10px solid #000;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .device-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: white;
+    }
+
+    .top-bar {
+      width: 40%;
+      height: 16px;
+      background: #111;
+      border-radius: 999px;
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="layout-container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <h5>Layouts</h5>
+
+    <ul class="nav flex-column mb-3" id="sidebarTabs">
+      <li><a class="nav-link active" data-group="layoutA">Layout A</a></li>
+      <li><a class="nav-link" data-group="layoutB">Layout B</a></li>
+      <li><a class="nav-link" data-group="admin">Admin</a></li>
+    </ul>
+
+    <!-- Layout A -->
+    <div id="layoutA-buttons" class="sub-buttons mb-4">
+      <button class="btn btn-outline-dark btn-sm" data-target="index.html">A – Home</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="menu.html">A – Menu</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="menu-drinks.html">A – Menu: Drinks</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="menu-bakery.html">A – Menu: Bakery</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="menu-lunch.html">A – Menu: Lunch</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="cart.html">A – Cart</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="catering.html">A – Catering</button>
+    </div>
+
+    <!-- Layout B -->
+    <div id="layoutB-buttons" class="sub-buttons mb-4 d-none">
+      <button class="btn btn-outline-dark btn-sm" data-target="layoutB-home.html">B – Home</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="layoutB-menu.html">B – Menu</button>
+    </div>
+
+    <!-- Admin -->
+    <div id="admin-buttons" class="sub-buttons mb-4 d-none">
+      <button class="btn btn-outline-dark btn-sm" data-target="admin-dashboard.html">Admin – Dashboard</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="admin-items.html">Admin – Items</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="admin-item-edit.html">Admin – Edit Item</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="admin-users.html">Admin – Users</button>
+      <button class="btn btn-outline-dark btn-sm" data-target="admin-reports.html">Admin – Reports</button>
+    </div>
+
+  </div>
+
+  <!-- DEVICE FRAME -->
+  <div class="device-area">
+    <div class="device-frame">
+      <div class="top-bar"></div>
+      <iframe id="previewFrame" src="index.html"></iframe>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  const frame = document.getElementById("previewFrame");
+
+  // Switching pages
+  document.body.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-target]");
+    if (btn) {
+      frame.src = btn.getAttribute("data-target");
+    }
+  });
+
+  // Sidebar tabs
+  const tabs = document.querySelectorAll("#sidebarTabs .nav-link");
+  const groups = {
+    layoutA: document.getElementById("layoutA-buttons"),
+    layoutB: document.getElementById("layoutB-buttons"),
+    admin: document.getElementById("admin-buttons"),
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      const group = tab.getAttribute("data-group");
+
+      for (const [name, element] of Object.entries(groups)) {
+        element.classList.toggle("d-none", name !== group);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

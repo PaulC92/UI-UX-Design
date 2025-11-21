@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Users | Steam & Sugar</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/styles/admin.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-light">
+
+  <!-- Top app bar -->
+  <nav id="Navigation" class="navbar py-2" style="background-color:#fdf0da;">
+    <div class="container-fluid align-items-center">
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand me-2" href="index.html">
+          <img src="assets/images/logo.png" alt="Steam & Sugar logo" width="32" height="32">
+        </a>
+        <div class="d-flex flex-column lh-1">
+          <span class="small text-muted">Steam &amp; Sugar</span>
+          <span class="fw-semibold">Admin Dashboard</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Phone-width shell -->
+  <div class="admin-shell mx-auto">
+
+    <!-- Header + tabs -->
+    <header class="px-3 pt-3 pb-2 border-bottom bg-white">
+      <h6 class="fw-bold mb-2">Dashboard</h6>
+      <ul class="nav admin-tabs small">
+        <li class="nav-item">
+          <a class="nav-link" href="admin-dashboard.html">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin-items.html">Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin-reports.html">Reports</a>
+        </li>
+      </ul>
+
+      <!-- Search bar -->
+      <div class="search-bar mt-3">
+        <div class="input-group">
+          <span class="input-group-text">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input type="search" class="form-control" placeholder="Search items">
+        </div>
+      </div>
+    </header>
+
+    <main class="p-3 pb-4">
+
+      <!-- Filters row -->
+      <section class="d-flex align-items-center mb-2 gap-2 small">
+        <div class="btn-group flex-grow-1 filters-pill" role="group">
+          <button type="button" class="btn btn-sm btn-light active">Active Users</button>
+          <button type="button" class="btn btn-sm btn-light">Pending Users</button>
+        </div>
+      </section>
+
+      <!-- Helper info pill -->
+      <section class="admin-card mb-2 small d-flex align-items-center gap-2">
+        <i class="fa-solid fa-circle-info text-primary"></i>
+        <div class="flex-grow-1">
+          Here you can manage, sort, filter, or view users.
+        </div>
+        <button class="btn btn-sm btn-link text-muted p-0">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </section>
+
+      <!-- Items table-like card -->
+      <section class="admin-card p-0 overflow-hidden">
+
+        <!-- Header Row -->
+        <div class="pt-1 row items-row items-header small text-muted">
+            <div class="ms-2 col-2 col-check">
+                <input class="form-check-input" type="checkbox" aria-label="Select all">
+            </div>
+            <div class="col-1 col-name">Name</div>
+            <div class="me-3 col-actions text-end">Actions</div>
+        </div>
+
+        <!-- Item rows -->
+        <div class="items-list small">
+
+          <!-- Row 1 -->
+          <div class="items-row">
+            <div class="col-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="col-name">
+              <div class="fw-semibold">Sample User</div>
+              <div class="text-muted">#8193013</div>
+            </div>
+            
+            <div class="col-actions text-end">
+              <button class="icon-btn" aria-label="View">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <button class="icon-btn" aria-label="Edit">
+                <i class="fa-regular fa-pen-to-square"></i>
+              </button>
+              <button class="icon-btn" aria-label="Duplicate">
+                <i class="fa-regular fa-clone"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="items-row">
+            <div class="col-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="col-name">
+              <div class="fw-semibold">Sample User</div>
+              <div class="text-muted">#8193014</div>
+            </div>
+             
+            <div class="col-actions text-end">
+              <button class="icon-btn"><i class="fa-regular fa-eye"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-clone"></i></button>
+            </div>
+          </div>
+
+          <div class="items-row">
+            <div class="col-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="col-name">
+              <div class="fw-semibold">Sample User</div>
+              <div class="text-muted">#8193015</div>
+            </div>
+             
+            <div class="col-actions text-end">
+              <button class="icon-btn"><i class="fa-regular fa-eye"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-clone"></i></button>
+            </div>
+          </div>
+
+          <div class="items-row">
+            <div class="col-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="col-name">
+              <div class="fw-semibold">Sample User</div>
+              <div class="text-muted">#8193016</div>
+            </div>
+             
+            <div class="col-actions text-end">
+              <button class="icon-btn"><i class="fa-regular fa-eye"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-clone"></i></button>
+            </div>
+          </div>
+
+          <div class="items-row">
+            <div class="col-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="col-name">
+              <div class="fw-semibold">Sample User</div>
+              <div class="text-muted">#8193017</div>
+            </div>
+             
+            <div class="col-actions text-end">
+              <button class="icon-btn"><i class="fa-regular fa-eye"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-clone"></i></button>
+            </div>
+          </div>
+
+          <div class="items-row">
+            <div class="col-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="col-name">
+              <div class="fw-semibold">Sample User</div>
+              <div class="text-muted">#8193018</div>
+            </div>
+             
+            <div class="col-actions text-end">
+              <button class="icon-btn"><i class="fa-regular fa-eye"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-clone"></i></button>
+            </div>
+          </div>
+
+          <div class="items-row">
+            <div class="col-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="col-name">
+              <div class="fw-semibold">Sample User</div>
+              <div class="text-muted">#8193019</div>
+            </div>
+             
+            <div class="col-actions text-end">
+              <button class="icon-btn"><i class="fa-regular fa-eye"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-clone"></i></button>
+            </div>
+          </div>
+
+          <div class="items-row">
+            <div class="col-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+            <div class="col-name">
+              <div class="fw-semibold">Sample User</div>
+              <div class="text-muted">#8193020</div>
+            </div>
+             
+            <div class="col-actions text-end">
+              <button class="icon-btn"><i class="fa-regular fa-eye"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button class="icon-btn"><i class="fa-regular fa-clone"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Same little info/footer card as dashboard -->
+      <section class="admin-card small mb-2 mt-3">
+        <div class="row">
+          <div class="col-4 mb-3">
+            <h6 class="small fw-semibold mb-1">Mobile app</h6>
+            <ul class="list-unstyled mb-0">
+              <li>Live share</li>
+              <li>Video record</li>
+            </ul>
+          </div>
+          <div class="col-4 mb-3">
+            <h6 class="small fw-semibold mb-1">Community</h6>
+            <ul class="list-unstyled mb-0">
+              <li>Featured artists</li>
+              <li>Live events</li>
+            </ul>
+          </div>
+          <div class="col-4 mb-3">
+            <h6 class="small fw-semibold mb-1">Company</h6>
+            <ul class="list-unstyled mb-0">
+              <li>About us</li>
+              <li>History</li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-2">
+          <span class="small text-muted">Follow us</span>
+          <div class="d-flex gap-2">
+            <a href="#" class="icon-circle" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="icon-circle" aria-label="Facebook">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <p class="text-center small text-muted mb-0">© Steam &amp; Sugar</p>
+
+    </main>
+  </div>
+
+</body>
+</html>

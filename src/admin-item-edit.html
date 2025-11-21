@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin – Edit Item | Steam & Sugar</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Shared admin styles (same file as dashboard/items page) -->
+  <link rel="stylesheet" href="assets/styles/admin.css" />
+
+  <!-- Font Awesome (if you need icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="bg-light">
+
+  <!-- Top app bar -->
+  <nav id="Navigation" class="navbar py-2" style="background-color:#fdf0da;">
+    <div class="container-fluid align-items-center">
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand me-2" href="index.html">
+          <img src="assets/images/logo.png" alt="Steam & Sugar logo" width="32" height="32">
+        </a>
+        <div class="d-flex flex-column lh-1">
+          <span class="small text-muted">Steam &amp; Sugar</span>
+          <span class="fw-semibold">Admin Dashboard</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Phone-width shell -->
+  <div class="admin-shell mx-auto">
+
+    <!-- Header + tabs -->
+    <header class="px-3 pt-3 pb-2 border-bottom bg-white">
+      <h6 class="fw-bold mb-2">Dashboard</h6>
+      <ul class="nav admin-tabs small">
+        <li class="nav-item">
+          <a class="nav-link" href="admin-dashboard.html">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="admin-items.html">Items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin-users.html">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="admin-reports.html">Reports</a>
+        </li>
+      </ul>
+
+  <!-- Main content -->
+  <main class="py-3">
+    <div class="container">
+      <!-- Narrow card like mobile wireframe -->
+      <div class="mx-auto" style="max-width:480px;">
+        <div class="card shadow-sm border-0 rounded-4">
+          <div class="card-body p-3 p-md-4">
+
+            <h5 class="text-center mb-3 fw-semibold">Edit Item</h5>
+
+            <!-- Image preview placeholder -->
+            <div class="mb-3">
+              <div class="border rounded-3 bg-light d-flex align-items-center justify-content-center" style="height:200px;">
+                <span class="text-muted small">Image preview</span>
+              </div>
+            </div>
+
+            <form>
+              <!-- Title -->
+              <div class="mb-3">
+                <label class="form-label small mb-1">Title</label>
+                <input type="text" class="form-control form-control-sm" placeholder="Espresso" />
+              </div>
+
+              <!-- Description -->
+              <div class="mb-3">
+                <label class="form-label small mb-1">Description</label>
+                <textarea class="form-control form-control-sm" rows="2" placeholder="Short item description"></textarea>
+              </div>
+
+              <!-- Price -->
+              <div class="mb-3">
+                <label class="form-label small mb-1">Price (£)</label>
+                <input type="number" step="0.01" class="form-control form-control-sm" placeholder="2.80" />
+              </div>
+
+              <!-- Quantity -->
+              <div class="mb-3">
+                <label class="form-label small mb-1">Quantity</label>
+                <input type="number" class="form-control form-control-sm" placeholder="24" />
+              </div>
+
+              <!-- Allergy Advice -->
+              <div class="mb-3">
+                <label class="form-label small mb-1">Allergy Advice</label>
+                <textarea class="form-control form-control-sm" rows="2" placeholder="Contains milk, soy, etc."></textarea>
+              </div>
+
+              <!-- Image upload -->
+              <div class="mb-4">
+                <label class="form-label small mb-1">Image</label>
+                <input type="file" class="form-control form-control-sm" />
+              </div>
+
+              <!-- Buttons -->
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-danger btn-sm px-4">Delete</button>
+                <button type="submit" class="btn btn-primary btn-sm px-4">Save</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Footer (same style as other admin pages) -->
+        <div class="text-center mt-4 mb-3 small text-muted">
+          © Steam &amp; Sugar
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
