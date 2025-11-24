@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Steam & Sugar – Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Layout B Styles -->
+  <link rel="stylesheet" href="../assets/styles/layout-b.css">
+</head>
+
+<body>
+<div class="mobile-shell">
+  <div class="mobile-frame">
+
+    <!-- Top Bar -->
+    <header class="app-bar d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-2">
+        <img src="../assets/images/logo-b.png" class="brand-logo" alt="Steam & Sugar logo">
+        <div class="brand-text">
+          <div class="brand-name">Steam & Sugar</div>
+        </div>
+      </div>
+      <button class="icon-button" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- Highlight Strip -->
+    <div class="status-strip d-flex align-items-center gap-2">
+      <i class="fa-solid fa-award"></i>
+      <span>Small-batch roasters • Artisan pastries • Mobile coffee bar</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="card-panel hero-card mt-2">
+      <p class="eyebrow mb-1">Where Artisan Meets Everyday</p>
+      <h1 class="hero-title mb-2">Premium coffee, baked fresh daily</h1>
+      <p class="hero-body mb-3">
+        We pull every shot to order and bake our pastries in-house each morning.
+        Stop by for a latte, stay for the vibes.
+      </p>
+
+      <div class="d-grid gap-2 mb-3">
+        <a class="btn btn-accent w-100" href="menu.html">
+          Explore Our Menu <i class="fa-solid fa-arrow-right ms-2"></i>
+        </a>
+        <a class="btn btn-outline-light w-100" href="https://maps.google.com" target="_blank" rel="noopener">
+          View Location
+        </a>
+      </div>
+
+      <div class="hero-meta d-flex flex-column gap-2 pb-2">
+        <div class="d-flex align-items-center gap-2">
+          <i class="fa-regular fa-clock"></i>
+          <div>
+            <div class="meta-label">Open Today</div>
+            <div class="meta-value">7:00 AM – 7:00 PM</div>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <div class="meta-label">Downtown District</div>
+            <div class="meta-value">123 City Centre</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="mt-3 px-2">
+      <p class="section-label text-center mb-2">Learn More</p>
+
+      <div class="d-flex flex-column gap-2">
+
+        <div class="card-panel feature-card d-flex align-items-center gap-3">
+          <div class="feature-icon"><i class="fa-solid fa-mug-hot"></i></div>
+          <div>
+            <div class="feature-title">Coffee Bar on Wheels</div>
+            <div class="feature-text">Book our mobile espresso bar for weddings, offices & events.</div>
+          </div>
+        </div>
+
+        <div class="card-panel feature-card d-flex align-items-center gap-3">
+          <div class="feature-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+          <div>
+            <div class="feature-title">Fresh Pastries Daily</div>
+            <div class="feature-text">Croissants, muffins & brownies baked every morning.</div>
+          </div>
+        </div>
+
+        <div class="card-panel feature-card d-flex align-items-center gap-3">
+          <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+          <div>
+            <div class="feature-title">Ethically Sourced</div>
+            <div class="feature-text">Beans from sustainable farms we know and trust.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Story Block -->
+    <section class="mt-3 px-2">
+      <div class="card-panel story-card">
+        <div class="story-image-placeholder" style="background-image:url('../assets/images/hotdrinks.jpg'); background-size:cover; background-position:center;">
+          <span class="visually-hidden">Feature image</span>
+        </div>
+
+        <div class="mt-3">
+          <p class="eyebrow mb-1">House Favourite</p>
+          <h2 class="story-title mb-1">Signature Flat White</h2>
+          <p class="story-body">
+            Two shots of our seasonal espresso topped with silky micro-foam. Balanced, bold, and beautifully smooth.
+          </p>
+
+          <div class="d-flex align-items-center justify-content-between mt-3">
+            <div class="price-tag">£2.70</div>
+            <span class="pill pill-soft">Most Popular</span>
+          </div>
+
+          <a class="btn btn-outline-light w-100 mt-3" href="menu.html">See Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Grid Preview -->
+    <section class="mt-4 px-2">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <div>
+          <p class="section-heading mb-0">Our Menu</p>
+          <p class="section-sub small mb-0">Customer favourites</p>
+        </div>
+        <a class="link-button" href="menu.html">
+          All <i class="fa-solid fa-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-2 menu-grid">
+        <!-- 1 -->
+        <div class="col-6">
+          <div class="menu-card card-panel">
+            <div class="menu-thumb" style="background-image:url('../assets/images/hotdrinks.jpg');"></div>
+            <div class="menu-info">
+              <p class="menu-name mb-0">Cappuccino</p>
+              <p class="menu-price mb-0">£2.90</p>
+              <div class="d-flex justify-content-between mt-1">
+                <div class="rating small"><i class="fa-solid fa-star"></i> 4.8</div>
+                <span class="pill pill-outline small">Hot</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="col-6">
+          <div class="menu-card card-panel">
+            <div class="menu-thumb" style="background-image:url('../assets/images/icedcoffee.jpg');"></div>
+            <div class="menu-info">
+              <p class="menu-name mb-0">Iced Mocha</p>
+              <p class="menu-price mb-0">£3.50</p>
+              <div class="d-flex justify-content-between mt-1">
+                <div class="rating small"><i class="fa-solid fa-star"></i> 4.6</div>
+                <span class="pill pill-outline small">Cold</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="col-6">
+          <div class="menu-card card-panel">
+            <div class="menu-thumb" style="background-image:url('../assets/images/crossaint.jpg');"></div>
+            <div class="menu-info">
+              <p class="menu-name mb-0">Butter Croissant</p>
+              <p class="menu-price mb-0">£2.40</p>
+              <div class="d-flex justify-content-between mt-1">
+                <div class="rating small"><i class="fa-solid fa-star"></i> 4.7</div>
+                <span class="pill pill-outline small">Bakery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="col-6">
+          <div class="menu-card card-panel">
+            <div class="menu-thumb" style="background-image:url('../assets/images/blueberrymufin.jpg');"></div>
+            <div class="menu-info">
+              <p class="menu-name mb-0">Blueberry Muffin</p>
+              <p class="menu-price mb-0">£2.60</p>
+              <div class="d-flex justify-content-between mt-1">
+                <div class="rating small"><i class="fa-solid fa-star"></i> 4.5</div>
+                <span class="pill pill-outline small">Sweet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="col-6">
+          <div class="menu-card card-panel">
+            <div class="menu-thumb" style="background-image:url('../assets/images/club.jpg');"></div>
+            <div class="menu-info">
+              <p class="menu-name mb-0">Club Sandwich</p>
+              <p class="menu-price mb-0">£5.80</p>
+              <div class="d-flex justify-content-between mt-1">
+                <div class="rating small"><i class="fa-solid fa-star"></i> 4.6</div>
+                <span class="pill pill-outline small">Lunch</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="col-6">
+          <div class="menu-card card-panel">
+            <div class="menu-thumb" style="background-image:url('../assets/images/icedcoffee.jpg');"></div>
+            <div class="menu-info">
+              <p class="menu-name mb-0">Cold Brew</p>
+              <p class="menu-price mb-0">£3.40</p>
+              <div class="d-flex justify-content-between mt-1">
+                <div class="rating small"><i class="fa-solid fa-star"></i> 4.7</div>
+                <span class="pill pill-outline small">Slow brew</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Footer Block -->
+    <section class="mt-4 px-2 mb-4">
+      <div class="card-panel catering-card">
+        <h2 class="story-title mb-1">Elevate Your Events</h2>
+        <p class="story-body mb-3">
+          Hosting something special? Bring Steam & Sugar to you with our mobile coffee bar and pastry platters.
+        </p>
+        <div class="d-grid gap-2">
+          <a class="btn btn-accent" href="catering.html">Request Quote</a>
+          <a class="btn btn-outline-light" href="catering.html">Catering Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <div class="container my-4">
+      <div class="rounded p-3 shadow-sm">
+        <h6 class="fw-bold mb-3">Get In Touch</h6>
+
+        <label class="small fw-bold">Name</label>
+        <input type="text" class="form-control mb-3" placeholder="Your name">
+
+        <label class="small fw-bold">Email</label>
+        <input type="email" class="form-control mb-3" placeholder="you@example.com">
+
+        <label class="small fw-bold">Message</label>
+        <textarea class="form-control" rows="3" placeholder="How can we help?"></textarea>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container mt-4 pb-4">
+      <div class="py-3">
+        <img src="../assets/images/logo-b.png" width="24" class="me-2" alt="Logo">
+      </div>
+
+      <div class="row">
+        <div class="col-4 mb-3">
+          <h6 class="fw-bold small">Mobile app</h6>
+          <p class="small mb-1">Features</p>
+          <p class="small mb-1">Live share</p>
+          <p class="small mb-1">Video record</p>
+        </div>
+
+        <div class="col-4 mb-3">
+          <h6 class="fw-bold small">Community</h6>
+          <p class="small mb-1">Featured artists</p>
+          <p class="small mb-1">The Portal</p>
+          <p class="small mb-1">Live events</p>
+        </div>
+
+        <div class="col-4 mb-3">
+          <h6 class="fw-bold small">Company</h6>
+          <p class="small mb-1">About us</p>
+          <p class="small mb-1">Contact us</p>
+          <p class="small mb-1">History</p>
+        </div>
+      </div>
+
+      <div class="my-3">
+        <p class="small fw-bold mb-1">Subscribe to our newsletter</p>
+        <input type="email" class="form-control" placeholder="Email Address">
+      </div>
+
+      <div class="d-flex align-items-center mt-3">
+        <span class="small me-3">Follow us:</span>
+        <i class="fa-brands fa-instagram me-2"></i>
+        <i class="fa-brands fa-x-twitter me-2"></i>
+        <i class="fa-brands fa-facebook me-2"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <p class="text-center small mt-3 mb-0">© Steam & Sugar.</p>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
