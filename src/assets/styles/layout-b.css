@@ -1,0 +1,330 @@
+/* Dark coffee background outside the phone */
+body {
+  margin: 0;
+  background: #050404;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Stop the page from scrolling (no body scrollbar) */
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Make the phone frame the ONLY scroll container */
+.mobile-frame {
+  /* Use dynamic viewport units for mobile browsers, with fallbacks */
+  height: calc(100svh - 32px);
+  height: calc(100dvh - 32px);
+  height: calc(100vh - 32px);   /* fallback */
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
+
+  /* Hide scrollbars but keep scrolling */
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE/old Edge */
+}
+.mobile-frame::-webkit-scrollbar {  /* Chrome/Safari/new Edge */
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Centered phone frame */
+.mobile-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px 8px;
+}
+
+.mobile-frame {
+  width: 100%;
+  max-width: 420px;
+  min-height: calc(100vh - 32px);
+  border-radius: 18px;
+  background: radial-gradient(circle at top, #2f231c 0, #15100d 55%, #0b0806 100%);
+  color: #f6f1e9;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.75);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Top app bar */
+.app-bar {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(10,6,4,0.98);
+}
+
+.brand-logo {
+  width: 26px;
+  height: 26px;
+}
+
+.brand-text {
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.icon-button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 8px;
+  background: rgba(246,241,233,0.06);
+  color: #f6f1e9;
+}
+
+/* Status strip */
+.status-strip {
+  padding: 6px 14px;
+  font-size: 0.7rem;
+  color: rgba(246,241,233,0.8);
+  background: linear-gradient(90deg,#332016,#1a120b);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Generic card */
+.card-panel {
+  margin: 0 12px;
+  padding: 14px 14px 16px;
+  border-radius: 14px;
+  background: radial-gradient(circle at top left, #3a2518 0, #201610 45%, #18100d 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.6);
+}
+
+/* Hero card specifics */
+.hero-card {
+  margin-top: 10px;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f9c784;
+}
+
+.hero-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.hero-body {
+  font-size: 0.8rem;
+  color: rgba(246,241,233,0.8);
+}
+
+/* Buttons */
+.btn-accent {
+  background: linear-gradient(135deg,#f9c784,#f7a623);
+  border: none;
+  color: #22120b;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 999px;
+}
+
+.btn-accent:hover {
+  filter: brightness(1.05);
+}
+
+.btn-outline-light {
+  border-radius: 999px;
+  border-width: 1px;
+  border-color: rgba(246,241,233,0.55);
+  color: #f6f1e9;
+  font-size: 0.85rem;
+  background: transparent;
+}
+
+.btn-outline-light:hover {
+  background: rgba(246,241,233,0.08);
+}
+
+/* Hero meta lines */
+.hero-meta .meta-label {
+  font-size: 0.7rem;
+  color: rgba(246,241,233,0.65);
+}
+
+.hero-meta .meta-value {
+  font-size: 0.8rem;
+}
+
+/* Section headings / labels */
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(246,241,233,0.7);
+}
+
+.section-heading {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.section-sub {
+  color: rgba(246,241,233,0.7);
+}
+
+/* Feature cards */
+.feature-card {
+  background: radial-gradient(circle at top left,#312018 0,#19100d 45%,#130d0a 100%);
+}
+
+.feature-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(249,199,132,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9c784;
+}
+
+.feature-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.feature-text {
+  font-size: 0.75rem;
+  color: rgba(246,241,233,0.7);
+}
+
+/* Story / image card */
+.story-card {
+  background: radial-gradient(circle at top,#302118 0,#18100e 45%,#110c09 100%);
+}
+
+.story-image-placeholder {
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+    45deg,
+    #2a211b,
+    #2a211b 6px,
+    #201814 6px,
+    #201814 12px
+  );
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(246,241,233,0.45);
+  font-size: 0.8rem;
+}
+
+.story-title {
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+.story-body {
+  font-size: 0.8rem;
+  color: rgba(246,241,233,0.8);
+}
+
+/* Pills / tags */
+.pill {
+  border-radius: 999px;
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.pill-soft {
+  background: rgba(249,199,132,0.15);
+  color: #f9c784;
+}
+
+.pill-outline {
+  border: 1px solid rgba(249,199,132,0.65);
+  color: #f9c784;
+  text-decoration: none;
+}
+
+.pill-solid {
+  border: 1px solid white;
+  background-color: rgba(249,199,132,0.65);
+  color: white;
+  text-decoration: none;
+}
+
+/* Price tag */
+.price-tag {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Menu grid */
+.menu-grid {
+  margin-top: 4px;
+}
+
+.menu-card {
+  overflow: hidden;              /* hides any bleed from inner corners */
+  border-radius: 14px;           /* match your card-panel rounding */
+}
+
+.menu-card .menu-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;           /* square thumbs (change to 4/3 or 3/2 if you prefer) */
+  background-size: cover;        /* fill the box, crop excess */
+  background-position: center;   /* keep subject centered */
+  background-repeat: no-repeat;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.menu-info {
+  margin-top: 4px;
+}
+
+.menu-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.menu-price {
+  font-size: 0.78rem;
+  color: rgba(246,241,233,0.85);
+}
+
+.rating {
+  color: #f9c784;
+}
+
+/* Link button (All ->) */
+.link-button {
+  border: none;
+  background: transparent;
+  color: #f9c784;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Catering card */
+.catering-card {
+  background: radial-gradient(circle at top,#3c2418 0,#1a100d 45%,#120b08 100%);
+}
+
+/* Footer */
+.app-footer {
+  padding: 10px 14px 16px;
+  font-size: 0.7rem;
+  color: rgba(246,241,233,0.65);
+}
