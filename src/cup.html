@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Cup | Steam & Sugar</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Roboto + CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/style.css">
+
+</head>
+<body>
+
+  <!-- Nav Bar (Layout A standard) -->
+  <nav id="Navigation" class="navbar py-2" style="background-color:#fdf0da;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Steam and Sugar logo" width="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color:#fdf0da9d;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Steam & Sugar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body fw-bold">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+            <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
+            <hr>
+            <li class="nav-item"><a class="nav-link" href="about.html"><small>About us</small></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><small>Past events & Creations</small></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <main id="smart-cup" class="container my-3">
+    <!-- What is Smart Cup -->
+    <div class="card border-0 shadow-sm rounded-4 soft mb-3">
+      <div class="card-body">
+        <h6 class="fw-bold mb-2"><i class="fa-regular fa-circle-question me-2"></i>What is the Smart Cup system?</h6>
+        <p class="mb-0 text-muted">
+          Our RFID-enabled smart cups let you bring your own reusable mug and earn rewards every time.
+          Each cup has a unique chip that tracks your usage, calculates environmental impact, and
+          automatically applies discounts at checkout.
+        </p>
+      </div>
+    </div>
+
+    <!-- How it works (3 steps) -->
+    <p class="text-uppercase small text-muted mb-2">How it works</p>
+    <div class="d-flex flex-column gap-3 mb-4">
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body d-flex gap-3">
+          <div class="icon-dot icon-dot--green"><i class="fa-solid fa-store"></i></div>
+          <div>
+            <h6 class="fw-bold mb-1">1. Get Your Cup</h6>
+            <p class="mb-0 text-muted small">Buy a Steam & Sugar smart cup (£15 one-time) or register your own mug with an RFID tag.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body d-flex gap-3">
+          <div class="icon-dot icon-dot--green"><i class="fa-solid fa-id-badge"></i></div>
+          <div>
+            <h6 class="fw-bold mb-1">2. Tap & Order</h6>
+            <p class="mb-0 text-muted small">Tap at the counter or in-app; the system recognizes your mug and applies the discount.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-0 shadow-sm rounded-4">
+        <div class="card-body d-flex gap-3">
+          <div class="icon-dot icon-dot--green"><i class="fa-solid fa-seedling"></i></div>
+          <div>
+            <h6 class="fw-bold mb-1">3. Earn & Track</h6>
+            <p class="mb-0 text-muted small">Save £0.50 on every drink and track CO₂ saved & waste reduced in your activity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick facts -->
+    <div class="card border-0 shadow-sm rounded-4 soft mb-4">
+      <div class="card-body">
+        <h6 class="fw-bold mb-2">Quick Facts</h6>
+        <ul class="list-slim text-muted mb-0">
+          <li><i class="fa-solid fa-check text-success me-2"></i>£0.50 off every drink (auto-applied)</li>
+          <li><i class="fa-solid fa-check text-success me-2"></i>Real-time impact tracking</li>
+          <li><i class="fa-solid fa-check text-success me-2"></i>Use any reusable mug</li>
+          <li><i class="fa-solid fa-check text-success me-2"></i>Bonus streak rewards</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pills -->
+    <ul class="nav nav-pills gap-2 mb-3">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#impact">My Impact</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#rewards">Rewards</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#how">How It Works</button></li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- Impact -->
+      <div class="tab-pane fade show active" id="impact">
+        <div class="card border-0 shadow-sm rounded-4 mb-3">
+          <div class="card-body d-flex justify-content-between align-items-center">
+            <div>
+              <p class="text-muted small mb-0">Your Smart Cup</p>
+              <h5 class="mb-0">SC-8472</h5>
+              <p class="text-muted small mb-0">12-day streak • 47 total uses</p>
+            </div>
+            <div class="icon-dot icon-dot--green"><i class="fa-solid fa-mug-saucer"></i></div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12">
+            <div class="card border-0 shadow-sm rounded-4 soft">
+              <div class="card-body d-flex justify-content-between">
+                <div>
+                  <p class="text-muted small mb-1"><i class="fa-solid fa-leaf me-2 text-success"></i>CO₂ Saved</p>
+                  <h5 class="mb-0">12.3 kg</h5>
+                  <p class="text-muted small mb-0">~ 5 trees planted</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card border-0 shadow-sm rounded-4 soft">
+              <div class="card-body d-flex justify-content-between">
+                <div>
+                  <p class="text-muted small mb-1"><i class="fa-solid fa-trash-arrow-up me-2 text-success"></i>Waste Reduced</p>
+                  <h5 class="mb-0">4.7 kg</h5>
+                  <p class="text-muted small mb-0">47 Disposable cups not used</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="card border-0 shadow-sm rounded-4" style="background:#fff6e6;">
+              <div class="card-body d-flex justify-content-between">
+                <div>
+                  <p class="text-muted small mb-1"><i class="fa-solid fa-medal me-2" style="color:var(--gold)"></i>Total Savings</p>
+                  <h5 class="mb-0" style="color:#7a571c">£23.50</h5>
+                  <p class="text-muted small mb-0">Great Streak!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card border-0 shadow-sm rounded-4 mt-3">
+          <div class="card-body">
+            <h6 class="fw-bold mb-2">Recent Activity</h6>
+            <ul class="list-unstyled small mb-0">
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <span>Cappuccino (Large) • Today</span><span class="amount">£0.50</span>
+              </li>
+              <li class="d-flex justify-content-between py-2 border-bottom">
+                <span>Iced Latte (Medium) • Yesterday</span><span class="amount">£0.50</span>
+              </li>
+              <li class="d-flex justify-content-between py-2">
+                <span>Flat White (Small) • 2 days ago</span><span class="amount">£0.50</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rewards -->
+      <div class="tab-pane fade" id="rewards">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">Rewards</h6>
+            <p class="text-muted mb-0 small">Every 10 uses unlocks a bonus drink. Keep your streak to multiply rewards.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- How -->
+      <div class="tab-pane fade" id="how">
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body">
+            <h6 class="fw-bold mb-1">How It Works</h6>
+            <p class="text-muted mb-0 small">Tap your cup, order as usual, and your discount is applied automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card border-0 shadow-sm rounded-4 mt-4">
+      <div class="card-body">
+        <h6 class="fw-bold mb-3">Frequently Asked Questions</h6>
+
+        <div class="accordion" id="cupFaq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q1">How much does a smart cup cost?</button>
+            </h2>
+            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#cupFaq">
+              <div class="accordion-body">Our branded cup is £15 one-time. Or register your own mug with an RFID tag in-store.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Can I use my own reusable mug?</button>
+            </h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#cupFaq">
+              <div class="accordion-body">Yes! We can attach an RFID sticker and link it to your account.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">What if I lose my smart cup?</button>
+            </h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#cupFaq">
+              <div class="accordion-body">Disable it in the app or tell staff; we’ll unlink the lost tag and set up a new one.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Help card -->
+        <div class="card border-0 rounded-4 mt-3" style="background:#fff7ef;">
+          <div class="card-body text-center">
+            <p class="fw-bold mb-2">Still have questions?</p>
+            <div class="d-grid gap-2">
+              <a class="btn btn-outline-dark"><i class="fa-solid fa-phone me-2"></i>Call Us: (0000) 123-4567</a>
+              <a class="btn btn-outline-dark"><i class="fa-solid fa-envelope me-2"></i>Email: hello@steamsugar.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer (Layout A standard) -->
+  <div id="Footer" class="container pt-3 mt-5 mb-0">
+    <footer>
+      <div class="row mt-4">
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+        <div class="col-12 mt-5">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><p class="mb-0">Follow us: </p></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+        </ul>
+        <p class="ms-3 mb-0">© 2025 Steam & Sugar</p>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

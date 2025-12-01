@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Steam & Sugar – Smart Locker Pickup (Layout A)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/styles/style.css" />
+
+  <style>
+    .locker-hero {
+      background:#fdf0da;
+      border-bottom:3px solid #8c522e;
+    }
+    .pill-tab .nav-link{
+      border-radius:999px;
+      padding:.45rem .9rem;
+      font-weight:600;
+      color:#6b6b6b;
+      border:1px solid #e5e5e5;
+      background:#fff;
+    }
+    .pill-tab .nav-link.active{
+      background:#8c522e; color:#fff; border-color:#8c522e;
+    }
+
+    .soft-chip{
+      display:inline-block; padding:.25rem .6rem; border-radius:999px;
+      background:rgba(140,82,46,.12); color:#5a3a25; font-weight:600; font-size:.85rem;
+    }
+
+    .step-card .badge-num{
+      width:26px; height:26px; border-radius:50%;
+      background:#fdf0da; color:#8c522e; display:flex; align-items:center; justify-content:center;
+      font-weight:700; font-size:.8rem;
+    }
+    .step-card .feature-icon{
+      width:36px;height:36px;border-radius:.75rem;background:#f7ead6;color:#8c522e;
+      display:flex;align-items:center;justify-content:center;
+    }
+
+    .timeline{ list-style:none; padding-left:0; margin:0; }
+    .timeline li{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:.5rem .65rem; border-radius:.75rem; background:#fafafa; border:1px solid #eee; margin-bottom:.5rem;
+    }
+    .timeline .left{ display:flex; align-items:center; gap:.55rem; color:#333; }
+    .timeline i{ color:#2fb16a; } /* done state */
+    .timeline .pending i{ color:#b9b9b9; }
+
+    .info-strip{
+      background:#fff; border:1px solid #e9ecef; border-radius:1rem;
+    }
+
+    .accordion-item{ border-radius:.75rem; overflow:hidden; border:1px solid #e9ecef; }
+    .accordion-button{ background:#fff; }
+    .accordion-button:not(.collapsed){ background:#fff7ef; color:#3b2a1f; }
+    .accordion-item + .accordion-item{ margin-top:.5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Nav Bar-->
+  <nav id="Navigation" class="navbar py-2" style="background-color:#fdf0da;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt="Steam and Sugar logo" width="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background-color:#fdf0da9d;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Steam & Sugar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body fw-bold">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+            <li class="nav-item"><a class="nav-link" href="catering.html">Catering</a></li>
+            <hr>
+            <li class="nav-item"><a class="nav-link" href="about.html"><small>About us</small></a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><small>Past events & Creations</small></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-3">
+
+    <!-- Intro -->
+    <section class="info-strip p-3 mb-3 shadow-sm">
+      <div class="d-flex align-items-start gap-3">
+        <div class="step-card">
+          <div class="feature-icon"><i class="fa-solid fa-unlock-keyhole"></i></div>
+        </div>
+        <div>
+          <h5 class="fw-bold mb-1">Smart Locker Pickup</h5>
+          <p class="text-muted mb-0">Contactless pickup. Order ahead, collect anytime.</p>
+        </div>
+      </div>
+
+      <div class="p-3 mt-3 rounded-4" style="background:#fff7ef; border:1px solid #ffe1c3;">
+        <div class="d-flex align-items-start gap-2">
+          <div class="feature-icon" style="background:#ffe9d3;"><i class="fa-regular fa-circle-question"></i></div>
+          <div>
+            <p class="fw-semibold mb-1">What is Smart Locker Pickup?</p>
+            <p class="text-muted mb-0">
+              Order through our app. We’ll prepare your drinks and store them in a secure, temperature-controlled locker.
+              You’ll receive a QR code or PIN to unlock when you’re ready to collect — even outside regular hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <div class="d-flex gap-2 pill-tab mb-3">
+      <a class="nav-link active" href="#active-order">Active Order</a>
+      <a class="nav-link" href="#locations">Locker Locations</a>
+    </div>
+
+    <!-- How it works -->
+    <section class="mb-4">
+      <h6 class="fw-bold mb-1">Never used Locker Pickup before?</h6>
+      <p class="text-muted small mb-3">Everything you need to know in under 60 seconds.</p>
+
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="info-strip p-3 step-card">
+            <div class="d-flex align-items-start gap-3">
+              <div class="badge-num">1</div>
+              <div>
+                <p class="fw-semibold mb-1">Order Online</p>
+                <p class="text-muted mb-0">Browse our menu and place your order. Select <strong>Locker Pickup</strong> at checkout and choose a location.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="info-strip p-3 step-card">
+            <div class="d-flex align-items-start gap-3">
+              <div class="badge-num">2</div>
+              <div>
+                <p class="fw-semibold mb-1">We Prepare It</p>
+                <p class="text-muted mb-0">Our baristas craft your order fresh, then place it in a temperature-controlled locker (hot stays hot, cold stays cold).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="info-strip p-3 step-card">
+            <div class="d-flex align-items-start gap-3">
+              <div class="badge-num">3</div>
+              <div>
+                <p class="fw-semibold mb-1">Scan & Collect</p>
+                <p class="text-muted mb-0">You’ll get a QR code & backup PIN. Scan or enter the PIN at the touchscreen, collect, and go.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick facts -->
+    <section class="info-strip p-3 mb-4">
+      <h6 class="fw-bold mb-2">Quick Facts</h6>
+      <ul class="list-unstyled m-0 d-grid gap-2">
+        <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-clock text-success"></i>Available 24/7</li>
+        <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-temperature-three-quarters text-warning"></i>Temperature controlled</li>
+        <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-user-shield text-primary"></i>No need to wait or interact with staff</li>
+        <li class="d-flex align-items-center gap-2"><i class="fa-solid fa-shield-halved text-danger"></i>Secure – unique code per order</li>
+      </ul>
+    </section>
+
+    <!-- Active Order -->
+    <section id="active-order" class="info-strip p-3 mb-3">
+      <div class="d-flex align-items-start justify-content-between">
+        <div class="d-flex align-items-start gap-2">
+          <i class="fa-solid fa-circle-check text-success mt-1"></i>
+          <div>
+            <p class="mb-0 fw-semibold">Ready for Pickup</p>
+            <p class="text-muted small mb-1">Your order in <strong>Locker A7</strong> • Downtown District</p>
+          </div>
+        </div>
+        <span class="soft-chip">45 mins</span>
+      </div>
+    </section>
+
+    <!-- Order details -->
+    <section class="info-strip p-3 mb-3">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <span class="text-muted small">Order #58-2847</span>
+        <span class="soft-chip">View receipt</span>
+      </div>
+
+      <div class="p-3 rounded-4 mb-3" style="background:#f8f9fa; border:1px solid #e9ecef;">
+        <p class="mb-2 fw-semibold">Your Items</p>
+        <div class="d-flex justify-content-between small"><span>Cappuccino (Large)</span><span>x1</span></div>
+        <div class="d-flex justify-content-between small"><span>Almond Croissant</span><span>x2</span></div>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <div class="left"><i class="fa-solid fa-check"></i><span>Order Placed</span></div>
+          <span class="text-muted small">2:15 PM</span>
+        </li>
+        <li>
+          <div class="left"><i class="fa-solid fa-fire-burner"></i><span>Preparing</span></div>
+          <span class="text-muted small">2:18 PM</span>
+        </li>
+        <li>
+          <div class="left"><i class="fa-solid fa-mug-hot"></i><span>Ready</span></div>
+          <span class="text-muted small">2:25 PM</span>
+        </li>
+        <li>
+          <div class="left"><i class="fa-solid fa-box-archive"></i><span>In Locker</span></div>
+          <span class="text-muted small">2:26 PM</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- QR + PIN -->
+    <section class="info-strip p-3 mb-4">
+      <div class="text-center mb-3">
+        <img src="assets/images/qr-code.png" class="img-fluid rounded" alt="QR code" style="max-width:220px;">
+      </div>
+      <div class="text-center">
+        <div class="text-muted small">BACKUP PIN</div>
+        <div class="display-6 fw-bold" style="font-size:1.6rem;">4729</div>
+      </div>
+
+      <div class="p-3 rounded-4 mt-3" style="background:#fff7ef; border:1px solid #ffe1c3;">
+        <p class="fw-semibold mb-1">How to collect your order</p>
+        <ol class="text-muted mb-1 small">
+          <li>Go to the Smart Locker at your selected location.</li>
+          <li>Scan the QR code or enter the PIN on the touchscreen.</li>
+          <li>Your locker door will unlock automatically — collect your order and close the door.</li>
+        </ol>
+        <p class="text-muted small mb-0">Order ID: <strong>58-2847</strong></p>
+      </div>
+    </section>
+
+    <!-- Help -->
+    <section class="info-strip p-3 mb-4">
+      <div class="d-flex align-items-start gap-3">
+        <i class="fa-regular fa-life-ring mt-1"></i>
+        <div class="flex-grow-1">
+          <p class="mb-1 fw-semibold">Need help?</p>
+          <p class="text-muted small mb-2">If you have issues accessing your locker, our staff is here to assist you.</p>
+          <button class="btn btn-primary w-100" style="background:#8c522e; border-color:#8c522e;">
+            <i class="fa-solid fa-headset me-2"></i>Contact Support
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="mb-5">
+      <h6 class="fw-bold mb-2">Frequently Asked Questions</h6>
+      <div class="accordion" id="lockerFaq">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q1">
+              How do I use the locker system for the first time?
+            </button>
+          </h2>
+          <div id="q1" class="accordion-collapse collapse" data-bs-parent="#lockerFaq">
+            <div class="accordion-body">Order as normal, choose “Locker Pickup”, then scan your QR or enter the PIN when you arrive.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">
+              What if I forget my QR code or PIN?
+            </button>
+          </h2>
+          <div id="q2" class="accordion-collapse collapse" data-bs-parent="#lockerFaq">
+            <div class="accordion-body">Tap “Need help” at the locker screen or speak to staff; we can verify your order securely.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">
+              How long will my order stay in the locker?
+            </button>
+          </h2>
+          <div id="q3" class="accordion-collapse collapse" data-bs-parent="#lockerFaq">
+            <div class="accordion-body">Orders remain available for up to 60 minutes; temperature is managed for quality.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">
+              Can I collect my order outside opening hours?
+            </button>
+          </h2>
+          <div id="q4" class="accordion-collapse collapse" data-bs-parent="#lockerFaq">
+            <div class="accordion-body">Yes. Smart Lockers are accessible 24/7 at participating locations.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <div id="Footer" class="container pt-3 mt-5 mb-0">
+    <footer>
+      <div class="row mt-4">
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+        <div class="col-4 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 mt-5">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="email" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button" style="background:#8c522e; border-color:#8c522e;">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><p class="mb-0">Follow us: </p></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+        </ul>
+        <p class="ms-3 mb-0">© 2025 Steam & Sugar</p>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

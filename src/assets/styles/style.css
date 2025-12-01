@@ -27,7 +27,7 @@ html, body {
   background-color: #fdf0da;
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
-  border-top: 3px solid #8c522e; /* visually anchors bottom */
+  border-top: 3px solid #8c522e; 
 }
 
 .horizontal-scroll {
@@ -52,4 +52,55 @@ html, body {
   background: #ccc;
   border-radius: 10px;
 }
+
+#smart-cup .card{
+  background:#fff;
+  border:1px solid #e9ecef;
+  border-radius:1rem;
+  box-shadow:0 .25rem .75rem rgba(0,0,0,.04);
+}
+
+/* Icon tile on the left */
+#smart-cup .icon-dot{
+  width:36px;height:36px;border-radius:.75rem;
+  background:#fdf0da;
+  color:#8c522e; 
+  display:flex;align-items:center;justify-content:center;
+}
+
+#smart-cup .tag-soft,
+#smart-cup .metric-badge, 
+#smart-cup .badge-soft{
+  background:rgba(140,82,46,.08);
+  border:none;
+  color:#5a3a25;
+  padding:.25rem .6rem;
+  border-radius:999px;
+  font-weight:600;
+  font-size:.85rem;
+  box-shadow:none;
+}
+
+/* CO2/Waste cards */
+#smart-cup .stat-card{
+  border:1px solid #e9ecef !important;
+  background:#fff !important;
+}
+
+#smart-cup .savings-card{
+  background:#fff7ef !important;
+  border:1px solid #ffe1c3 !important;
+}
+#smart-cup .savings-card .tag-soft{ background:#ffe7cc; }
+
+#smart-cup .nav-pills .nav-link{
+  border-radius:999px; font-weight:600; color:#6c757d;
+}
+#smart-cup .nav-pills .nav-link.active{ background:#8c522e; color:#fff; }
+
+#smart-cup .accordion-item{ background:#fff; border:1px solid #e9ecef; border-radius:.75rem; }
+#smart-cup .accordion-button{ background:#fff; }
+#smart-cup .accordion-button:not(.collapsed){ background:#fff7ef; color:#36261b; }
+#smart-cup .accordion-item + .accordion-item{ margin-top:.5rem; }
+
 
